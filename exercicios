@@ -1,0 +1,20 @@
+import array
+
+while True:
+    try:
+        n = int(input('Quantos numeros voce vai digitar?'))
+        break
+    except ValueError:
+        print('Por favor, Digite apenas numeros inteiros.')
+
+numeros = array.array('i', [0] * n)
+
+for i in range(n):
+    numeros[i] = int(input('Digite um numero:'))
+somas = 0
+for numero in numeros:
+    print(f'VALORES = {numero}')
+    for soma in numero:
+        somas += soma
+
+print(f'SOMA = {somas:.2f}')
